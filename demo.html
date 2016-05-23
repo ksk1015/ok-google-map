@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>google map ok</title>
+
+<!-- Load ok-google-map.js and set API KEY -->
+<script src="ok-google-map.js"></script>
+<script>okGoogleMap.setKey('YOUR_API_KEY');</script>
+
+</head>
+<body>
+
+<div id="gmap1" style="margin: 50px auto; width: 300px;  height: 300px;"></div>
+<script>
+okGoogleMap(function(){
+	var map = new google.maps.Map(document.getElementById('gmap1'), {
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		center: new google.maps.LatLng(35.3605555, 138.7277777),
+		zoom: 12
+	});
+});
+</script>
+
+<div id="gmap2" style="margin: 50px auto; width: 300px;  height: 300px;">
+	<button onclick="showMap()">show Google Map</button>
+</div>
+<script>
+function showMap(){
+	okGoogleMap(function(){
+		var map = new google.maps.Map(document.getElementById('gmap2'), {
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			center: new google.maps.LatLng(41.308333, 141.088056),
+			zoom: 12
+		});
+	});
+}
+</script>
+
+</body>
+</html>
